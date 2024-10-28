@@ -20,7 +20,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <h1 className="text-black">Hi there</h1>
         <Route path="/student-list" element={<StudentList />} />
         <Route path="/add-student" element={<AddStudentForm />} />
         <Route path="/classes" element={<ClassManagement />} />
