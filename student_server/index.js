@@ -3,8 +3,7 @@ import cors from "cors";
 import Pool from "pg-pool";
 import dotenv from "dotenv";
 import multer from "multer";
-import path from "path";
-import { Router } from "express";
+
 
 import fs from "fs";
 
@@ -183,7 +182,7 @@ app.get("/student/:student_id", async (req, res) => {
 });
 
 app.post("/fee", async (req, res) => {
-  const { student_id, amount, payment_date } = req.body; // Expect these fields in the request body
+  const { student_id, amount, payment_date } = req.body; 
   try {
     const newFee = await postgresPool.query(
       "INSERT INTO fee (student_id, amount, payment_date) VALUES ($1, $2, $3) RETURNING *",
