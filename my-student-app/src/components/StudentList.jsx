@@ -1,4 +1,3 @@
-// src/StudentList.jsx
 import { useEffect, useState } from "react";
 
 const StudentList = () => {
